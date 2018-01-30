@@ -31,6 +31,6 @@ window.addEventListener('load', function()
 				container.style.background = arrayOfColors[state];
 			}
 
-			setTimeout(changeStuff, 1500);
+			setTimeout(changeStuff, 150);
 		});
 	});
