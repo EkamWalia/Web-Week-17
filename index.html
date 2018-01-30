@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title> Web Week </title>
+	<style>
+		body
+		{
+			background: black;
+			margin: 0;
+		}
+
+		#text
+		{
+			text-transform: capitalize;
+			color: black;
+			text-align: center;
+		}
+
+		#container
+		{
+			background: white;
+			width: 100%;
+			height: 50px;
+			margin-top: calc(50vh - 15px);
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<h1 id="text"> welcome to the web week </h1>
+	</div>
+</body>
+
+<script>
+
+	/*
+
+	zeroeth - show js is asynchronous using the hello world example?
+
+	first - single click simply changes text
+	 -- we introduce settimeout here --
+	second - click also changes background color
+	third - clicks toggle both text and background color using a boolean
+	fourth - clicks choose from an array of colors for background
+	 -- we could bugfix at this point to introduce hoisting --
+	*/
+
+	window.addEventListener('load', function()
+	{
+		text = document.getElementById('text');
+		container = document.getElementById('container');
+
+		var state = 0;
+		var arrayOfColors = ["red", "green", "blue", "yellow", "pink"];
+
+		container.addEventListener('click', function()
+		{
+			function changeStuff()
+			{
+				// if(state == true)
+				// {
+				// 	text.innerHTML = "State True";
+				// 	document.body.style.background = "white";
+				// 	container.style.background = "black";
+				// 	text.style.color = "white";
+				// 	state = false;
+				// }
+				// else
+				// {
+				// 	text.innerHTML = "State False";
+				// 	document.body.style.background = "black";
+				// 	container.style.background = "white";
+				// 	text.style.color = "black";
+				// 	state = true;
+				// }
+				/* var */ state = (state + 1) % arrayOfColors.length;
+				text.innerHTML = arrayOfColors[state];
+				container.style.background = arrayOfColors[state];
+			}
+
+			setTimeout(changeStuff, 1500);
+		});
+	});
+</script>
+</html>
+
+
+<!-- if they seem comfortable with this much then we also introduce transitions because honestly tatti sa page rn? -->
+
