@@ -1,0 +1,14 @@
+{
+  "name": "iecsenode",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "Shreyansh Murarka",
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "express": "~4.15.5",
+    "mysql": "^2.15.0"
+  }
+}
