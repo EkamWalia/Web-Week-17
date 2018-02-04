@@ -1,4 +1,4 @@
-### IECSE's Web Week 17
+### IECSE's Web Week 18
 
 ##### NOTE : Please follow the instructions at the [wiki](https://github.com/EkamWalia/Web-Week-17/wiki) and install the prerequisite softwares
 
